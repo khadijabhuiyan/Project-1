@@ -1,0 +1,203 @@
+@use 'variables' as *;
+
+#header {
+  background:black;
+  color: $backgroundColor;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    font-size: 15px;
+    font-weight: bold;
+
+    .logo-wrapper {
+      max-height: 100%;
+      width: auto;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 100%;
+
+    .nav-wrapper {
+      ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        height: 100%;
+      }
+
+      ul li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        a {
+          color: $backgroundColor;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          transition: all linear 0.2s;
+          &:hover {
+            color: $brandColor;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 5px;
+              background: $brandColor;
+            }
+          }
+          }
+          &:hover{
+          .dropdown-menu {
+            display: flex;
+          }
+        }
+        }
+
+        .dropdown-menu {
+          background: $foregroundColor + dd;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 200px;
+          min-width: 120px;
+          height: auto;
+          display: none;
+          flex-direction: column;
+          align-items: start;
+          gap: 0;
+          padding: 20px 0;
+          list-style-type: none;
+          z-index: 999;
+          // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+          li {
+            // padding: 0 20px;
+            width: 100%;
+            a {
+              color: $backgroundColor;
+              text-decoration: none;
+              height: 40px;
+              display: flex;
+              align-items: block;
+              width: 100%;
+              transition: all;
+              padding-left: 15px;
+              &:hover{
+                width: 100%;
+                background: $foregroundColor;
+                overflow: hidden;
+              }
+              &:hover::before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-right: 48px;
+
+      svg {
+        fill: $backgroundColor;
+        width: 24px;
+        margin-right: 48px;
+        cursor: pointer;
+        transition: fill 0.2s, transform 0.2s ease-in-out;
+
+        &:hover {
+          fill: $brandColor;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+.search-fullscreen-active{
+  overflow: hidden;
+}
+.search_overlay_wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $foregroundColor + dd;
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  .search_container{
+    .so_close_btn{
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 48px;
+      color: $backgroundColor;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        transform:rotate(90deg);
+      }
+    }
+    .search_utility{
+      display: flex;
+      align-items: stretch;
+      box-sizing: border-box;
+      height: 70px;
+
+      .search_bar{
+        width: 300px;
+        font-size: 18px;
+        outline: none;
+        box-sizing: border-box;
+        border-radius: 0px;
+        border: none;
+        border-right: 1px solid $foregroundColor;
+        padding: 0 10px;
+        margin: 0;
+      }  
+      .so_search_btn{
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 0 20px;
+        background: $brandColor;
+        color: $foregroundColor;
+        box-sizing: border-box;
+        // border-radius: 0 5px 5px 0;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

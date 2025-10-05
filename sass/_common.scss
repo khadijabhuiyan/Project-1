@@ -1,0 +1,19 @@
+html,
+body,
+ul,
+li,
+p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.page-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.full-width{
+    width: 100%;
+}
