@@ -208,9 +208,6 @@
   display: none;
   
 }
-.mobile_nav_active{
- 
-}
 
 @media screen and (max-width: 1080px) {
   // .search_overlay_wrapper {
@@ -328,6 +325,7 @@
   }
   to {
     transform: rotate(90deg);
+  }
 }
 @keyframes rotateOut {
   from {
@@ -335,4 +333,5 @@
   }
   to {
     transform: rotate(0deg);
+  }
 }
