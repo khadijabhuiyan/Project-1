@@ -210,24 +210,17 @@
 }
 
 @media screen and (max-width: 1080px) {
-  // .search_overlay_wrapper {
-  //   .search_utility {
-  //     width: 80%;
-  //     .search_bar {
-  //       width: 100%;
-  //       min-width: 0;
-  //     }
-  //     .so_search_btn {
-  //       padding: 0 10px;
-  //       font-size: 14px;
-  //       letter-spacing: 0;
-  //       text-transform: none;
-  //       border-radius: 0;
-  //       border: none;
-  //       margin: 0;
-  //     }
-  //   }
-  // }
+  .search_overlay_wrapper {
+    .search_utility {
+      
+      .search_bar {
+        width: 150px;
+        min-width: 0;
+      }
+      .so_search_btn {
+      }
+    }
+  }
 
   #header{
     transition: all linear 0.5s ease-in-out; 
