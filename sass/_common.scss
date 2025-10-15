@@ -1,3 +1,4 @@
+
 html,
 body,
 ul,
@@ -16,4 +17,23 @@ body{
 }
 .full-width{
     width: 100%;
+}
+.primary-button{
+    @extend %button-style !optional;
+    background: transparent;
+    color: $foregroundColor;
+    border-color: $foregroundColor;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        background: $foregroundColor;
+        color: $backgroundColor;
+    }
+    
+}
+.secondary-button{
+    @extend %button-style !optional;
+    background: transparent;
+    color: $foregroundColor;
+    border-color: $brandColor;
 }

@@ -1,8 +1,10 @@
-@use 'variables' as *;
+
 
 #header {
   background:black;
   color: $backgroundColor;
+  position: relative;
+  z-index: 1000;
 
   .header {
     display: flex;
@@ -67,7 +69,7 @@
         }
 
         .dropdown-menu {
-          background: $foregroundColor + dd;
+          background: rgba($foregroundColor, 0.85);
           position: absolute;
           top: 100%;
           left: 0;
@@ -149,7 +151,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: $foregroundColor + dd;
+  background: rgba($foregroundColor, 0.85);
   backdrop-filter: blur(5px);
   z-index: 9999;
   display: none;
@@ -214,10 +216,8 @@
     .search_utility {
       
       .search_bar {
-        width: 150px;
+        width: 100%;
         min-width: 0;
-      }
-      .so_search_btn {
       }
     }
   }

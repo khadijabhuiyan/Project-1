@@ -1,3 +1,5 @@
-@use 'variables';
-@use 'common';
-@use 'header';
+@import 'variables';
+@import 'extend';
+@import 'common';
+@import 'header';
+@import 'hero';
