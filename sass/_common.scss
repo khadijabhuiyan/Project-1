@@ -24,6 +24,7 @@ body{
     color: $foregroundColor;
     border-color: $foregroundColor;
     transition: all 0.5s ease-in-out;
+    margin-top: 10px;
 
     &:hover{
         background: $foregroundColor;

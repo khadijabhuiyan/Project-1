@@ -36,6 +36,7 @@ let OpenMobileMenu = () => {
     body.classList.add('mobile_nav_active');
     toggleIcon.src = "../img/logos/close.webp";
     toggleIcon.style.animation= "rotateIn .5s ease-in-out";
+    body.style.overflow = 'hidden';
 }
 let CloseMobileMenu = () => {
     mobileNav.style.transform = 'translateX(300px)';
@@ -43,6 +44,7 @@ let CloseMobileMenu = () => {
     body.classList.remove('mobile_nav_active');
     toggleIcon.src = "../img/logos/toggle.webp";
      toggleIcon.style.animation= "rotateOut .5s ease-in-out";
+     body.style.overflow = 'auto';
 }
 toggleTrigger.addEventListener('click', () => {
     if (body.classList.contains('mobile_nav_active')) {

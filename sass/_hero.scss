@@ -2,7 +2,7 @@
 
 .hero-banner {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .bg-img img {
     width: 100%;
@@ -28,38 +28,94 @@
       padding: 20px;
       width: 50%;
       margin-left: auto;
+       .banner-card {
+          background:$backgroundColor;
+          opacity: 0.8;
+          padding: 20px;
+          width: 60%;
+          height:500px ;
+          margin-left: 100px;
+          padding: 60px;
+        }
+
+        .sub-heading {
+          @extend %subheading-style !optional;
+        }
+
+        .heading {
+            @extend %heading-style !optional;
+            a {
+                text-decoration: none;
+                color: $foregroundColor;
+                text-transform: uppercase;
+            }
+        }
+
+        .text {
+          @extend %text-style !optional;
+        }
+        .primary-button{
+          display: block;
+        margin: 30px auto 0;
+        }
+    }
+  }
+
+   
+  .contents-for-mobile{
+    display: none;
+  }
+}
+// Responsive start
+@media screen and (max-width: 750px) {
+  .hero-banner {
+    .bg-img img {
+      height: 400px;
+      &:hover {
+        transform: scale(1);
+      }
     }
 
-    .banner-card {
-      background:$backgroundColor;
-      opacity: 0.8;
-      padding: 20px;
-      width: 60%;
-      height:500px ;
-      margin-left: 100px;
-      padding: 60px;
-         }
-
-    .sub-heading {
-      @extend %subheading-style !optional;
+    .contents {
+      display: none;
     }
 
-    .heading {
-        @extend %heading-style !optional;
-        a {
+    .contents-for-mobile {
+      display: block;
+      position: relative;
+      overflow-x: hidden;
+      .right {
+        // padding: 20px;
+        // width: 50%;
+        // margin-left: auto;
+        // background-color: red;
+
+        .banner-card {
+          background: $backgroundColor;
+          opacity: 0.8;
+          width: 60%;
+          height: 500px;
+          // margin-left: 100px;
+          padding: 20px;
+          // position: absolute;
+        }
+
+        .sub-heading {
+          @extend subheading-style !optional;
+
+        }
+
+        .heading {
+          @extend heading-style !optional;
+
+          a {
             text-decoration: none;
             color: $foregroundColor;
             text-transform: uppercase;
+          }
+          .primary-button{}
         }
-    }
-
-    .text {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .primary-button{
-      display: block;
-    margin: 30px auto 0;
+      }
     }
   }
 }
