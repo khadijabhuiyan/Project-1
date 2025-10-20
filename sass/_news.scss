@@ -1,8 +1,9 @@
-#latest{
+#news{
+
     display: flex;
     gap: 20px;
     // justify-content: space-between;
-    margin: 40px 120px;
+    margin: 0px 120px;
     .part-one{
         .heading{
             @extend %heading-style ;
@@ -69,8 +70,8 @@
     .part-three{
         cursor: pointer;
         .primary-button{
-            width: 200px;
-            margin-left: 200px;
+            width: 300px;
+            margin-left: 120px;
         }
     .article-container{
         margin-top: 35px;

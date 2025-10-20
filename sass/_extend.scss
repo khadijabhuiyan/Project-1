@@ -1,21 +1,18 @@
 
 
 %button-style{
-    padding: 8px 25px;
     text-transform: uppercase;
-    font-size: 1rem;
-    border-radius: 25px;
     font-weight: 800;
     border-width: 1px;
     border-style: solid;
     cursor: pointer;
     text-align: center;
-    width: 400px;
 }
 %subheading-style{
     font-size: 1.2rem;
       font-weight: bold;
       color: $brandColor;
+      text-transform: uppercase;
 }
 
 %heading-style{
@@ -23,11 +20,13 @@
         font-weight: bold;
         font-style: normal;
         font-size: 4.5rem;
+        text-transform: uppercase;
 
 }
 %text-style{
           font-size: 1rem;
           line-height: 1.5;
+          text-transform: capitalize;
         }
 
 

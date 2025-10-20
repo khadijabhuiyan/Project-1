@@ -1,0 +1,107 @@
+#trending {
+    display: flex;
+    //  gap: 20px;
+    justify-content: space-between;
+    margin: 40px 120px ;
+    // overflow: hidden;
+
+  .left-part {
+    // background-color: red;
+    width: 35%;
+    height: 550px;
+    .heading {
+      @extend %heading-style;
+    }
+
+    .cards-holder {
+        cursor: pointer;
+    width: 500px;
+     display: flex;
+      flex-wrap: wrap;               // allow wrapping if needed
+      gap: 20px;
+
+      .first-card,
+      .second-card,
+      .third-card,
+      .fourth-card {
+        box-sizing: border-box;
+        .img-container{
+            overflow: hidden;
+             img {
+          width: 200px;
+          height: 170px;
+          transition: transform 0.5s ease-in-out;
+               object-fit: cover;
+               &:hover{
+                transform: scale(1.2);
+               }
+        }
+        }
+        .secondary-button{
+            margin-top: -15px;
+                width: 200px;
+                text-align: start;
+                padding: 5px 20px;
+        }
+        .text{
+             @extend %text-style !optional;
+                font-size: 1rem;
+                width: 200px;
+        }
+      }
+    }
+  }
+
+  .right-part {
+    position: relative;
+
+    .primary-button{
+        width: 200px;
+        margin-left: 620px;
+    }
+
+    .bg-img {
+      overflow: hidden;
+      img {
+        width: 830px;
+        height: 475px;
+        margin-top: 35px;
+        transition: transform 0.5s ease-in-out;
+        object-fit: fill;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .banner-card {
+      position: absolute;
+      top: 125px;
+      left: 50px;
+      width: 215px;
+      height: 350px;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px); 
+      color: $backgroundColor;
+      padding: 30px;
+
+      .subheading {
+        font-size: 1.5rem;
+        color: $brandColor;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+
+      .heading a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: $backgroundColor;
+      }
+
+      .text {
+        @extend %text-style;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

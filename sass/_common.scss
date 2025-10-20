@@ -24,7 +24,11 @@ body{
     color: $foregroundColor;
     border-color: $foregroundColor;
     transition: all 0.5s ease-in-out;
+    font-size: 1rem;
     margin-top: 10px;
+    width: 400px;
+    border-radius: 25px;
+    padding: 8px 25px;
 
     &:hover{
         background: $foregroundColor;
@@ -34,7 +38,15 @@ body{
 }
 .secondary-button{
     @extend %button-style !optional;
-    background: transparent;
-    color: $foregroundColor;
-    border-color: $brandColor;
+    background: $foregroundColor;
+    color: $brandColor;
+    padding: 5px;
+    margin:10px 0;
+    font-size: 12px;
+}
+.read-article-btn{
+    font-size: 16px;
+    color: $brandColor;
+    font-weight: bold;
+    
 }
