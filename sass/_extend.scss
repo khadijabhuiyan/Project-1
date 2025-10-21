@@ -14,7 +14,6 @@
       color: $brandColor;
       text-transform: uppercase;
 }
-
 %heading-style{
         font-family: 'Steelfish', Arial, Helvetica, sans-serif;
         font-weight: bold;
@@ -23,11 +22,11 @@
         text-transform: uppercase;
 
 }
-%text-style{
-          font-size: 1rem;
-          line-height: 1.5;
-          text-transform: capitalize;
-        }
+    %text-style{
+              font-size: 1rem;
+              line-height: 1.5;
+              text-transform: capitalize;
+    }
 
 
 

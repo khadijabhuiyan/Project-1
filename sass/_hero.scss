@@ -39,11 +39,11 @@
         }
 
         .sub-heading {
-          @extend %subheading-style !optional;
+          @extend %subheading-style;
         }
 
         .heading {
-            @extend %heading-style !optional;
+            @extend %heading-style;
             a {
                 text-decoration: none;
                 color: $foregroundColor;
@@ -52,7 +52,7 @@
         }
 
         .text {
-          @extend %text-style !optional;
+          @extend %text-style;
         }
         .primary-button{
           display: block;
@@ -60,60 +60,50 @@
         }
     }
   }
-
-   
-  .contents-for-mobile{
-    display: none;
-  }
+}
+.mobile-hero-banner{
+  display: none;
 }
 // Responsive start
 @media screen and (max-width: 750px) {
-  .hero-banner {
-    .bg-img img {
-      height: 400px;
-      &:hover {
-        transform: scale(1);
+  .hero-banner{
+    display: none;
+  }
+  .mobile-hero-banner {
+    display: block;
+    .bg-img {
+      overflow: hidden;
+      a {
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          transition: transform 0.5s ease-in-out;
+        }
       }
     }
-
     .contents {
-      display: none;
-    }
-
-    .contents-for-mobile {
-      display: block;
+      display: flex;
       position: relative;
-      overflow-x: hidden;
       .right {
-        // padding: 20px;
-        // width: 50%;
-        // margin-left: auto;
-        // background-color: red;
-
-        .banner-card {
-          background: $backgroundColor;
-          opacity: 0.8;
-          width: 60%;
-          height: 500px;
-          // margin-left: 100px;
-          padding: 20px;
-          // position: absolute;
-        }
-
+        width: 100%;
+        background: transparent;
+        padding: 20px;
         .sub-heading {
-          @extend subheading-style !optional;
-
+          // @extend %subheading-style;
         }
-
         .heading {
-          @extend heading-style !optional;
-
+          // @extend %heading-style;
           a {
             text-decoration: none;
             color: $foregroundColor;
             text-transform: uppercase;
           }
-          .primary-button{}
+        }
+        .text {
+        }
+        .primary-button {
+          width: 250px;
         }
       }
     }
