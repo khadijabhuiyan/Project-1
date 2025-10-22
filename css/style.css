@@ -50,13 +50,36 @@ body {
   font-weight: bold;
 }
 
+.price-btn {
+  background-color: #DF0043;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.buy-now-btn {
+  width: 200px;
+  height: 30px;
+  border-radius: 25px;
+  background: #000000;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+.buy-now-btn:hover {
+  background: #BF9A5E;
+  color: #000000;
+  border: none;
+}
+
 @font-face {
   font-family: "Steelfish";
   src: url("../fonts/SteelfishExtraBold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
-.primary-button, .secondary-button {
+.primary-button, .secondary-button, .buy-now-btn {
   text-transform: uppercase;
   font-weight: 800;
   border-width: 1px;
@@ -65,14 +88,14 @@ body {
   text-align: center;
 }
 
-#news .part-two .subheading-style, #news .part-one .subheading-style, #instruction .part-two .subheading-style, #instruction .part-one .subheading-style, #latest .part-two .subheading-style, #latest .part-one .subheading-style, .hero-banner .contents .right .sub-heading {
+.footer .footer-container .part-1 .heading-box .sub-heading, #news .part-two .subheading-style, #news .part-one .subheading-style, #instruction .part-two .subheading-style, #instruction .part-one .subheading-style, #latest .part-two .subheading-style, #latest .part-one .subheading-style, .hero-banner .contents .right .sub-heading {
   font-size: 1.2rem;
   font-weight: bold;
   color: #BF9A5E;
   text-transform: uppercase;
 }
 
-#news .part-one .heading, #instruction .part-one .heading, #trending .left-part .heading, #latest .part-one .heading, .hero-banner .contents .right .heading {
+.footer .footer-container .part-1 .heading-box .heading, .deals-part .heading, #news .part-one .heading, #instruction .part-one .heading, #trending .left-part .heading, #latest .part-one .heading, .hero-banner .contents .right .heading {
   font-family: "Steelfish", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -80,7 +103,7 @@ body {
   text-transform: uppercase;
 }
 
-#news .part-three .article-container .article1 .right .text, #news .part-three .article-container .article2 .right .text, #news .part-three .article-container .article3 .right .text, #news .part-three .article-container .article4 .right .text, #news .part-two .text, #news .part-one .text, #instruction .part-three .article-container .article1 .right .text, #instruction .part-three .article-container .article2 .right .text, #instruction .part-three .article-container .article3 .right .text, #instruction .part-three .article-container .article4 .right .text, #instruction .part-two .text, #instruction .part-one .text, #trending .right-part .banner-card .text, #trending .left-part .cards-holder .first-card .text,
+.footer .footer-container .part-1 .text-box .text, #news .part-three .article-container .article1 .right .text, #news .part-three .article-container .article2 .right .text, #news .part-three .article-container .article3 .right .text, #news .part-three .article-container .article4 .right .text, #news .part-two .text, #news .part-one .text, #instruction .part-three .article-container .article1 .right .text, #instruction .part-three .article-container .article2 .right .text, #instruction .part-three .article-container .article3 .right .text, #instruction .part-three .article-container .article4 .right .text, #instruction .part-two .text, #instruction .part-one .text, #trending .right-part .banner-card .text, #trending .left-part .cards-holder .first-card .text,
 #trending .left-part .cards-holder .second-card .text,
 #trending .left-part .cards-holder .third-card .text,
 #trending .left-part .cards-holder .fourth-card .text, #latest .part-three .article-container .article1 .right .text, #latest .part-three .article-container .article2 .right .text, #latest .part-three .article-container .article3 .right .text, #latest .part-three .article-container .article4 .right .text, #latest .part-two .text, #latest .part-one .text, .hero-banner .contents .right .text {
@@ -882,6 +905,70 @@ body {
 #news .part-three .article-container .article1 .right .reaction span, #news .part-three .article-container .article2 .right .reaction span, #news .part-three .article-container .article3 .right .reaction span, #news .part-three .article-container .article4 .right .reaction span {
   font-size: 12px;
   color: black;
+}
+
+.deals-part {
+  margin: 40px 120px;
+}
+.deals-part .products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.deals-part .products-container .product-card {
+  width: 190px;
+}
+.deals-part .products-container .product-card .product-img a img {
+  width: 188px;
+  height: 190px;
+  object-fit: contain;
+}
+.deals-part .products-container .product-card .product-info {
+  width: 200px;
+  color: #2c1a1a;
+  font-weight: bold;
+  margin: 10px 0px;
+  text-transform: capitalize;
+}
+.deals-part .products-container .product-card .discount {
+  margin-bottom: 50px;
+}
+.deals-part .products-container .product-card .discount .previous-price {
+  padding-right: 5px;
+  text-decoration: line-through;
+  color: #2c1a1a;
+}
+.deals-part .products-container .product-card .discount .current-price {
+  padding-right: 5px;
+  color: #DF0043;
+}
+.deals-part .products-container .product-card .buy-now-btn {
+  margin: auto;
+}
+
+.footer {
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  margin-top: 100px;
+}
+.footer .footer-container {
+  margin: 40px 120px;
+  padding-top: 70px;
+}
+.footer .footer-container .part-1 .heading-box .heading {
+  color: #ffffff;
+}
+.footer .footer-container .part-1 .text-box .text {
+  color: #ffffff;
+}
+.footer .footer-container .part-1 .text-box .primary-button {
+  color: #BF9A5E;
+  border-color: #BF9A5E;
+}
+.footer .footer-container .part-1 .text-box .primary-button:hover {
+  background: #BF9A5E;
+  color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

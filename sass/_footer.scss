@@ -1,0 +1,46 @@
+.footer {
+  width: 100%;
+  height: 100vh;
+  background: $foregroundColor;
+  margin-top: 100px;
+
+  .footer-container {
+    margin: 40px 120px;
+    padding-top: 70px;
+
+    .part-1 {
+      .logo {
+        img {
+          // image styles here
+        }
+      }
+
+      .heading-box {
+        .sub-heading {
+          @extend %subheading-style;
+        }
+
+        .heading {
+          @extend %heading-style;
+          color: $backgroundColor;
+        }
+      }
+
+      .text-box {
+        .text {
+          @extend %text-style;
+          color: $backgroundColor;
+        }
+
+        .primary-button {
+          color: $brandColor;
+          border-color: $brandColor;
+          &:hover {
+            background: $brandColor;
+            color: $foregroundColor;
+          }
+        }
+      }
+    }
+  }
+}

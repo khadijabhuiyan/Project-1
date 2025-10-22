@@ -50,3 +50,27 @@ body{
     font-weight: bold;
     
 }
+.price-btn{
+    background-color: #DF0043;
+    color: $backgroundColor;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.buy-now-btn{
+    @extend %button-style;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    background: $foregroundColor;
+    color: $backgroundColor;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        background: $brandColor;
+        color: $foregroundColor;
+        border: none;
+
+    }
+}
