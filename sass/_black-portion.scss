@@ -1,0 +1,104 @@
+.black-portion {
+  width: 100%;
+  height: auto;
+  background: $foregroundColor;
+  margin-top: 100px;
+  padding-bottom: 100px;
+
+  .footer-container {
+    margin: 40px 120px;
+    padding-top: 70px;
+    .part-1 {
+      display: flex;
+      gap: 60px;
+      margin-bottom: 20px;
+
+      .logo {
+        img {
+          width: 135px;
+          height: 160px;
+          object-fit: contain;
+        }
+      }
+
+      .heading-box {
+        width: 4500px; 
+
+        .sub-heading {
+          @extend %subheading-style;
+        }
+
+        .heading {
+          @extend %heading-style;
+          color: $backgroundColor;
+        }
+      }
+
+      .text-box {
+        .text {
+          @extend %text-style;
+          color: $backgroundColor;
+        }
+      }
+    }
+    .part-2 {
+      .primary-button {
+        color: $brandColor;
+        border-color: $brandColor;
+        margin-left: 900px;
+
+        &:hover {
+          background: $brandColor;
+          color: $foregroundColor;
+        }
+      }
+
+      .products-holder {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        .product-card {
+          .img-holder {
+            width: 400px;
+            height: 400px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .product-details-btn {
+            width: 400px;
+            height: 60px;
+            border-bottom: 5px solid $brandColor;
+            // padding: 3px;
+            .btn-holder {
+              .subheading {
+              color: $brandColor;;
+              font-size: 20px;
+              font-weight: bold;
+            }
+
+            .heading {
+              text-transform: uppercase;
+              color: $backgroundColor;
+              font-size: 20px;
+              font-weight: 900;
+              padding-right: 20px;
+            }
+            .icon{
+              i{
+                color: $brandColor;
+                font-size: 24px;;
+              }
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+}

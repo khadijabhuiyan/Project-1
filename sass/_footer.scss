@@ -1,46 +1,136 @@
 .footer {
+  margin-top: 20px;
   width: 100%;
-  height: 100vh;
-  background: $foregroundColor;
-  margin-top: 100px;
+  background-color: $foregroundColor;
 
   .footer-container {
-    margin: 40px 120px;
-    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 120px;
 
-    .part-1 {
-      .logo {
-        img {
-          // image styles here
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .footer-menu {
+        ul {
+          li {
+            padding-bottom: 5px;
+            a {
+              color: $backgroundColor;
+              text-decoration: none;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
         }
       }
 
-      .heading-box {
-        .sub-heading {
-          @extend %subheading-style;
-        }
+      .site-info {
+        display: flex;
+        ul {
+          display: flex;
+          li {
+            color: $brandColor;
+            padding-left: 10px;
 
+            a {
+              color: $brandColor;
+              text-decoration: none;
+              padding: 5px;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      .social-media {
+        display: flex;
+        gap: 15px;
+
+        .facebook,
+        .twitter,
+        .instagram {
+          i {
+            color: $backgroundColor;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      .flag-wrapper {
+        display: flex;
+        gap: 10px;
+        .flag {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          .usa, .japan {
+            img {
+              width: 25px;
+              height: 15px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        color: $backgroundColor;
+        font-size: 14px;
+        text-align: center;
+        opacity: 0.8;
+      }
+
+    }
+
+    .right {
+      width: 50%;;
+      .quote {
         .heading {
           @extend %heading-style;
           color: $backgroundColor;
+          font-weight: 600;
         }
       }
 
-      .text-box {
-        .text {
-          @extend %text-style;
-          color: $backgroundColor;
-        }
+      .author {
+        color: $backgroundColor;
+        margin-top: 20px;
+      }
+    }
+  }
 
-        .primary-button {
-          color: $brandColor;
-          border-color: $brandColor;
-          &:hover {
-            background: $brandColor;
-            color: $foregroundColor;
-          }
-        }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 40px;
+
+      .social-media {
+        justify-content: center;
       }
     }
   }
 }
+
+  
+  

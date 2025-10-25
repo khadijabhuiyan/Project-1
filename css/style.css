@@ -88,14 +88,14 @@ body {
   text-align: center;
 }
 
-.footer .footer-container .part-1 .heading-box .sub-heading, #news .part-two .subheading-style, #news .part-one .subheading-style, #instruction .part-two .subheading-style, #instruction .part-one .subheading-style, #latest .part-two .subheading-style, #latest .part-one .subheading-style, .hero-banner .contents .right .sub-heading {
+.black-portion .footer-container .part-1 .heading-box .sub-heading, #news .part-two .subheading-style, #news .part-one .subheading-style, #instruction .part-two .subheading-style, #instruction .part-one .subheading-style, #latest .part-two .subheading-style, #latest .part-one .subheading-style, .hero-banner .contents .right .sub-heading {
   font-size: 1.2rem;
   font-weight: bold;
   color: #BF9A5E;
   text-transform: uppercase;
 }
 
-.footer .footer-container .part-1 .heading-box .heading, .deals-part .heading, #news .part-one .heading, #instruction .part-one .heading, #trending .left-part .heading, #latest .part-one .heading, .hero-banner .contents .right .heading {
+.footer .footer-container .right .quote .heading, .black-portion .footer-container .part-1 .heading-box .heading, .deals-part .heading, #news .part-one .heading, #instruction .part-one .heading, #trending .left-part .heading, #latest .part-one .heading, .hero-banner .contents .right .heading {
   font-family: "Steelfish", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -103,7 +103,7 @@ body {
   text-transform: uppercase;
 }
 
-.footer .footer-container .part-1 .text-box .text, #news .part-three .article-container .article1 .right .text, #news .part-three .article-container .article2 .right .text, #news .part-three .article-container .article3 .right .text, #news .part-three .article-container .article4 .right .text, #news .part-two .text, #news .part-one .text, #instruction .part-three .article-container .article1 .right .text, #instruction .part-three .article-container .article2 .right .text, #instruction .part-three .article-container .article3 .right .text, #instruction .part-three .article-container .article4 .right .text, #instruction .part-two .text, #instruction .part-one .text, #trending .right-part .banner-card .text, #trending .left-part .cards-holder .first-card .text,
+.black-portion .footer-container .part-1 .text-box .text, #news .part-three .article-container .article1 .right .text, #news .part-three .article-container .article2 .right .text, #news .part-three .article-container .article3 .right .text, #news .part-three .article-container .article4 .right .text, #news .part-two .text, #news .part-one .text, #instruction .part-three .article-container .article1 .right .text, #instruction .part-three .article-container .article2 .right .text, #instruction .part-three .article-container .article3 .right .text, #instruction .part-three .article-container .article4 .right .text, #instruction .part-two .text, #instruction .part-one .text, #trending .right-part .banner-card .text, #trending .left-part .cards-holder .first-card .text,
 #trending .left-part .cards-holder .second-card .text,
 #trending .left-part .cards-holder .third-card .text,
 #trending .left-part .cards-holder .fourth-card .text, #latest .part-three .article-container .article1 .right .text, #latest .part-three .article-container .article2 .right .text, #latest .part-three .article-container .article3 .right .text, #latest .part-three .article-container .article4 .right .text, #latest .part-two .text, #latest .part-one .text, .hero-banner .contents .right .text {
@@ -946,29 +946,187 @@ body {
   margin: auto;
 }
 
-.footer {
+.black-portion {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: #000000;
   margin-top: 100px;
+  padding-bottom: 100px;
 }
-.footer .footer-container {
+.black-portion .footer-container {
   margin: 40px 120px;
   padding-top: 70px;
 }
-.footer .footer-container .part-1 .heading-box .heading {
+.black-portion .footer-container .part-1 {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+.black-portion .footer-container .part-1 .logo img {
+  width: 135px;
+  height: 160px;
+  object-fit: contain;
+}
+.black-portion .footer-container .part-1 .heading-box {
+  width: 4500px;
+}
+.black-portion .footer-container .part-1 .heading-box .heading {
   color: #ffffff;
 }
-.footer .footer-container .part-1 .text-box .text {
+.black-portion .footer-container .part-1 .text-box .text {
   color: #ffffff;
 }
-.footer .footer-container .part-1 .text-box .primary-button {
+.black-portion .footer-container .part-2 .primary-button {
   color: #BF9A5E;
   border-color: #BF9A5E;
+  margin-left: 900px;
 }
-.footer .footer-container .part-1 .text-box .primary-button:hover {
+.black-portion .footer-container .part-2 .primary-button:hover {
   background: #BF9A5E;
   color: #000000;
+}
+.black-portion .footer-container .part-2 .products-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .img-holder {
+  width: 400px;
+  height: 400px;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .product-details-btn {
+  width: 400px;
+  height: 60px;
+  border-bottom: 5px solid #BF9A5E;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .product-details-btn .btn-holder .subheading {
+  color: #BF9A5E;
+  font-size: 20px;
+  font-weight: bold;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .product-details-btn .btn-holder .heading {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  padding-right: 20px;
+}
+.black-portion .footer-container .part-2 .products-holder .product-card .product-details-btn .btn-holder .icon i {
+  color: #BF9A5E;
+  font-size: 24px;
+}
+
+.footer {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #000000;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 120px;
+}
+.footer .footer-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .footer-container .left .footer-menu ul li {
+  padding-bottom: 5px;
+}
+.footer .footer-container .left .footer-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer .footer-container .left .footer-menu ul li a:hover {
+  opacity: 0.8;
+}
+.footer .footer-container .left .site-info {
+  display: flex;
+}
+.footer .footer-container .left .site-info ul {
+  display: flex;
+}
+.footer .footer-container .left .site-info ul li {
+  color: #BF9A5E;
+  padding-left: 10px;
+}
+.footer .footer-container .left .site-info ul li a {
+  color: #BF9A5E;
+  text-decoration: none;
+  padding: 5px;
+}
+.footer .footer-container .left .site-info ul li a:hover {
+  opacity: 0.8;
+}
+.footer .footer-container .left .social-media {
+  display: flex;
+  gap: 15px;
+}
+.footer .footer-container .left .social-media .facebook i,
+.footer .footer-container .left .social-media .twitter i,
+.footer .footer-container .left .social-media .instagram i {
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer .footer-container .left .social-media .facebook i:hover,
+.footer .footer-container .left .social-media .twitter i:hover,
+.footer .footer-container .left .social-media .instagram i:hover {
+  opacity: 0.8;
+}
+.footer .footer-container .left .flag-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.footer .footer-container .left .flag-wrapper .flag {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .footer-container .left .flag-wrapper .flag .usa img, .footer .footer-container .left .flag-wrapper .flag .japan img {
+  width: 25px;
+  height: 15px;
+  object-fit: cover;
+}
+.footer .footer-container .left .copyright {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.8;
+}
+.footer .footer-container .right {
+  width: 50%;
+}
+.footer .footer-container .right .quote .heading {
+  color: #ffffff;
+  font-weight: 600;
+}
+.footer .footer-container .right .author {
+  color: #ffffff;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+  }
+  .footer .footer-container .social-media {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
